@@ -1,4 +1,5 @@
 # animation
 애니메이션_모음
 
-# https://swiperjs.com/demos/
+# 슬라이드용
+
