@@ -85,19 +85,19 @@ body {
                         cursor: pointer;
                     }
 
-                    .dd-menu {
+                    .header-nav-li {
                         &:hover {
                             border-bottom: 4px solid #4874e9;
                             color: #4874e9;
                         }
 
-                        &:hover .dd-sub-menu {
+                        &:hover .header-nav__header-sub {
                             visibility: visible;
                             opacity: 0.95;
                             transform: translateY(0%);
                         }
 
-                        .dd-sub-menu {
+                        .header-nav__header-sub {
                             visibility: hidden;
                             background-color: #ffffff;
                             max-width: 1920px;
