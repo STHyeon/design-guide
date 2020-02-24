@@ -28,13 +28,15 @@ body { font-family: "Open Sans"; }
 
 .header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul li { display: inline-block; font-size: 14px; line-height: 80px; padding: 0 20px; cursor: pointer; }
 
-.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .header-nav-li:hover { border-bottom: 4px solid #4874e9; color: #4874e9; }
+.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .dd-menu:hover { border-bottom: 4px solid #4874e9; color: #4874e9; }
 
-.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .header-nav-li .header-nav__header-sub { visibility: hidden; background-color: #ffffff; max-width: 1920px; opacity: 0; width: 100%; height: 70px; position: absolute; left: 0; right: 0; margin-top: 2px; font-size: 16px; line-height: 16px; color: #666666; z-index: -1; -webkit-box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05); box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05); }
+.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .dd-menu:hover .dd-sub-menu { visibility: visible; opacity: 0.95; -webkit-transform: translateY(0%); transform: translateY(0%); }
 
-.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .header-nav-li .header-nav__header-sub li { line-height: 70px; }
+.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .dd-menu .dd-sub-menu { visibility: hidden; background-color: #ffffff; max-width: 1920px; opacity: 0; width: 100%; height: 70px; position: absolute; left: 0; right: 0; margin-top: 2px; font-size: 16px; line-height: 16px; color: #666666; z-index: -1; -webkit-box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05); box-shadow: 0 5px 14px rgba(0, 0, 0, 0.05); }
 
-.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .header-nav-li .keep-hover { visibility: visible; opacity: 1; background: #ffffff; }
+.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .dd-menu .dd-sub-menu li { line-height: 70px; }
+
+.header__head .header-nav__head .header-nav__head-inner .header-nav__head-center ul .dd-menu .keep-hover { visibility: visible; opacity: 1; background: #ffffff; }
 
 .keep-hover { visibility: visible; opacity: 1; background: #ffffff; }
 

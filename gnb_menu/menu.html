@@ -5,18 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <!-- <link rel="stylesheet" type="text/html" href="./common/to_reset.css" /> -->
-        <link rel="stylesheet" href="../common/to_reset.css" />
+        <link rel="stylesheet" href="./css/to_reset.css" />
         <!-- <link rel="stylesheet" href="../common/reset.css" /> -->
         <link rel="stylesheet" href="./css/menu.css" />
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
-        <script src="./js/granim.js"></script>
-        <script src="./js/granim.option.js"></script>
     </head>
     <body>
         <!--TODO 191218 추가-->
-        <script>
+        <!-- <script>
             $(function() {
                 $(".header-nav-li").hover(function() {
                     $(this)
@@ -42,7 +39,7 @@
                     }
                 });
             });
-        </script>
+        </script> -->
         <!--//TODO 191218 추가-->
 
         <!-- 모바일 홍보 -->
@@ -68,33 +65,33 @@
                     </div>
                     <div class="header-nav__head-center">
                         <ul>
-                            <li class="header-nav-li">
+                            <li class="dd-menu">
                                 <span>투자하기</span>
-                                <ul class="header-nav__header-sub">
+                                <ul class="dd-sub-menu">
                                     <li><a href="">투자상품</a></li>
                                     <li><a href="">자동투자</a></li>
                                     <li><a href="">법인투자 안내</a></li>
                                 </ul>
                             </li>
-                            <li class="header-nav-li"><span href="">대출하기</span></li>
-                            <li class="header-nav-li">
+                            <li class="dd-menu"><span>대출하기</span></li>
+                            <li class="dd-menu">
                                 <span>이용안내</span>
-                                <ul class="header-nav__header-sub">
+                                <ul class="dd-sub-menu">
                                     <li><a href="">투자 가이드</a></li>
                                     <li><a href="">공지사항</a></li>
                                     <li><a href="">FAQ</a></li>
                                     <li><a href="">메일문의</a></li>
                                 </ul>
                             </li>
-                            <li class="header-nav-li">
+                            <li class="dd-menu">
                                 <span>회사소개</span>
-                                <ul class="header-nav__header-sub">
+                                <ul class="dd-sub-menu">
                                     <li><a href="">회사소개</a></li>
                                     <li><a href="">투게더펀딩 데이터</a></li>
                                     <li><a href="">이벤트</a></li>
                                 </ul>
                             </li>
-                            <li class="header-nav-li"><span>이벤트</span></li>
+                            <li class="dd-menu"><span>이벤트</span></li>
                         </ul>
                     </div>
                     <div class="header-nav__head-right">
@@ -113,5 +110,29 @@
             </div>
         </div>
         <div class="header_area_hidden"></div>
+        <script>
+            $(function() {
+                $(".dd-sub-menu").hover(function() {
+                    $(this).addClass("keep-hover");
+                    $(this)
+                        .parents()
+                        .children("span")
+                        .addClass("hover_active");
+                });
+
+                $(".dd-menu span")
+                    .not(".dd-menu span.hover_active")
+                    .hover(function() {
+                        $(".dd-menu span").removeClass("hover_active");
+                        $(".dd-sub-menu").removeClass("keep-hover");
+                    });
+
+                $(".dd-sub-menu").mouseleave(function() {
+                    if (!$(".header-nav__head").is(":hover")) {
+                        $(".dd-sub-menu").removeClass("keep-hover");
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
