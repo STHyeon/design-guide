@@ -4,107 +4,106 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <!-- <link rel="stylesheet" type="text/html" href="./common/to_reset.css" /> -->
-        <link rel="stylesheet" href="./css/to_reset.css" />
-        <!-- <link rel="stylesheet" href="../common/reset.css" /> -->
-        <link rel="stylesheet" href="./css/menu.css" />
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/menu.css" />
     </head>
     <body>
-        <!--TODO 191218 추가-->
-        <!-- <script>
-            $(function() {
-                $(".header-nav-li").hover(function() {
-                    $(this)
-                        .children(".header-nav__header-sub")
-                        .addClass("keep-hover");
-                    $(this)
-                        // .parents()
-                        .children("span")
-                        .addClass("hover_active");
-                });
-
-                $(".header-nav-li span")
-                    .not(".header-nav-li span.hover_active")
-                    .hover(function() {
-                        $(".header-nav-li span").removeClass("hover_active");
-                        $(".header-nav__header-sub").removeClass("keep-hover");
-                    });
-
-                $(".header-nav__head").mouseleave(function() {
-                    if ($(".header-nav__header-sub").hasClass("keep-hover")) {
-                        $(".header-nav__header-sub").removeClass("keep-hover");
-                        $(".header-nav-li span").removeClass("hover_active");
-                    }
-                });
-            });
-        </script> -->
-        <!--//TODO 191218 추가-->
-
-        <!-- 모바일 홍보 -->
-        <div class="header__head">
-            <div class="header-notice">
+        <div class="header_wrap">
+            <div class="header_notice">
                 <div class="inner clearfix">
-                    <div class="notice-left">
-                        <img src="./img/icon_time.png" alt="clock" class="header-notice-img" />
+                    <div class="header_notice_left">
+                        <img src="./img/icon_time.png" alt="clock" class="header_notice_img" />
                         매일 오전 10시 / 오후 4시! 투게더펀딩의 새로운 투자가 시작됩니다.
                     </div>
-                    <div class="notice-right">
-                        <img src="./img/icon_clock.gif" alt="10" class="header-notice-img" />
-                        <a href="#">자동투자 설정하기 ></a>
+                    <div class="header_notice_right">
+                        즐겨찾기
+                        <a href="#">
+                            <img src="./img/facebook.png" alt="facebook" class="header_notice_img header_facebook" />
+                        </a>
+                        <a href="#">
+                            <img src="./img/kakao.png" alt="kakao" class="header_notice_img" />
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="header-nav__head">
-                <div class="clearfix header-nav__head-inner">
-                    <div class="header-nav__head-left">
-                        <a href="#">
-                            <img src="./img/logo.png" alt="logo" />
-                        </a>
-                    </div>
-                    <div class="header-nav__head-center">
-                        <ul>
-                            <li class="header-nav-li">
-                                <span>투자하기</span>
-                                <ul class="header-nav__header-sub">
-                                    <li><a href="">투자상품</a></li>
-                                    <li><a href="">자동투자</a></li>
-                                    <li><a href="">법인투자 안내</a></li>
-                                </ul>
-                            </li>
-                            <li class="header-nav-li"><span>대출하기</span></li>
-                            <li class="header-nav-li">
-                                <span>이용안내</span>
-                                <ul class="header-nav__header-sub">
-                                    <li><a href="">투자 가이드</a></li>
-                                    <li><a href="">공지사항</a></li>
-                                    <li><a href="">FAQ</a></li>
-                                    <li><a href="">메일문의</a></li>
-                                </ul>
-                            </li>
-                            <li class="header-nav-li">
-                                <span>회사소개</span>
-                                <ul class="header-nav__header-sub">
-                                    <li><a href="">회사소개</a></li>
-                                    <li><a href="">투게더펀딩 데이터</a></li>
-                                    <li><a href="">이벤트</a></li>
-                                </ul>
-                            </li>
-                            <li class="header-nav-li"><span>이벤트</span></li>
-                        </ul>
-                    </div>
-                    <div class="header-nav__head-right">
-                        <a href="#">
-                            <div class="auth-box">
-                                회원가입
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="auth-box">
-                                로그인
-                            </div>
-                        </a>
+                <div class="header_nav">
+                    <div class="header_nav_inner">
+                        <div class="header_nav_left">
+                            <a href="#">
+                                <img src="./img/logo.png" alt="logo" />
+                            </a>
+                        </div>
+                        <div class="header_nav_center">
+                            <ul class="header_main_nav">
+                                <li class="header_main_li">
+                                    <span>투자하기</span>
+                                    <ul class="header_sub_nav">
+                                        <li>
+                                            <a href="#"><span>투자상품</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>자동투자</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span>법인투자 안내</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header_main_li">
+                                    <span>대출하기</span>
+                                </li>
+                                <li class="header_main_li">
+                                    <span>오픈마켓</span>
+                                </li>
+                                <li class="header_main_li">
+                                    <span>이용안내</span>
+                                    <ul class="header_sub_nav">
+                                        <li>
+                                            <a href=""><span>투자 가이드</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>공지사항</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>FAQ</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>메일문의</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header_main_li">
+                                    <span>회사소개</span>
+                                    <ul class="header_sub_nav">
+                                        <li>
+                                            <a href=""><span>회사소개</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>투게더펀딩 데이터</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>투게더펀딩 라이브</span></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>이벤트</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header_nav_right">
+                            <a href="#">
+                                <div class="auth_box">
+                                    회원가입
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="auth_box">
+                                    로그인
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,25 +111,23 @@
         <div class="header_area_hidden"></div>
         <script>
             $(function() {
-                $(".header-nav__header-sub").hover(function() {
-                    $(this).addClass("keep-hover");
-                    $(this)
-                        .parents()
-                        .children("span")
-                        .addClass("hover_active");
-                });
-
-                $(".header-nav-li span")
-                    .not(".header-nav-li span.hover_active")
+                $(".header_main_li")
+                    .not($(".header_main_li.hover_active"))
                     .hover(function() {
-                        $(".header-nav-li span").removeClass("hover_active");
-                        $(".header-nav__header-sub").removeClass("keep-hover");
+                        $(".header_main_li").removeClass("hover_active");
+                        $(".header_sub_nav").removeClass("hover");
                     });
 
-                $(".header-nav__header-sub").mouseleave(function() {
-                    if (!$(".header-nav__head").is(":hover")) {
-                        $(".header-nav__header-sub").removeClass("keep-hover");
-                    }
+                $(".header_main_li").hover(function() {
+                    $(this)
+                        .children(".header_sub_nav")
+                        .addClass("hover");
+                    $(this).addClass("hover_active");
+                });
+
+                $(".header_nav").mouseleave(function() {
+                    $(".header_main_li").removeClass("hover_active");
+                    $(".header_sub_nav").removeClass("hover");
                 });
             });
         </script>
