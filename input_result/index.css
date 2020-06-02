@@ -1,0 +1,23 @@
+.inner { max-width: 1180px; width: 100%; margin: 0 auto;}
+
+.loan_search_box { width: 100%; padding: 16px; background: #bcbcbc; text-align: center; }
+.loan_search_box .loan_search_common { display: inline-block;}
+.loan_search_box .loan_search_write { position: relative; width: 64%; }
+.loan_search_box .loan_search_write input { height: 35px;}
+.loan_search_box .loan_search_write .loan_search_result { overflow-y: scroll; position: absolute; z-index: 1; top: 34px; left: 0; width: 100%; height: 245px; border: 1px solid #41abff; background: #fff; }
+/* .loan_search_box .loan_search_write .loan_search_result .loan_search_no_result {  } */
+.loan_search_box .loan_search_write .loan_search_result.loan_search_no { text-align: center; }
+.loan_search_box .loan_search_write .loan_search_result.loan_search_no .loan_search_no_way { padding: 16px; text-align: left; }
+.loan_search_box .loan_search_write .loan_search_result.loan_search_no .loan_search_no_way li { position: relative; padding: 0 0 0 13px;}
+.loan_search_box .loan_search_write .loan_search_result.loan_search_no .loan_search_no_way li::before { display: inline-block; position: absolute; top: 10px; left: 0; content: ""; width: 5px; height: 5px; border-radius: 50%; background: #000000; }
+.loan_search_box .loan_search_write .loan_search_result.loan_search_ok li { padding: 8px; font-size: 11px; }
+.loan_search_box .loan_search_write .loan_search_result.loan_search_ok li:nth-child(2n-3) { background: #bcbcbc;}
+.loan_search_box .loan_search_write .loan_search_result.loan_search_ok li:hover { background: rgba(0, 128, 255, 0.8); }
+.loan_search_box .loan_search_write .loan_search_result.loan_search_ok li strong { display: block; padding: 0 0 8px; font-weight: bold; font-size: 12px; }
+.loan_search_box .loan_search_write_detail { width: 17%;}
+.loan_search_box .loan_search_write_detail .loan_search_select { width: 100%; height: 35px;}
+.loan_search_box .loan_search_write_detail .loan_search_select option:nth-child(2n-3) { background: #bcbcbc;}
+
+/* @media only screen and (max-width: 767px) {
+    .inner { max-width: 1180px; width: 100%;}
+} */
