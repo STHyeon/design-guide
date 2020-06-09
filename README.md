@@ -12,3 +12,6 @@ https://caniuse.com/
 
 # 그라데이션 설정 사이트
 www.colorzilla.com/gradient-editor 
+
+# Scss 참고 사이트
+https://webclub.tistory.com/518
