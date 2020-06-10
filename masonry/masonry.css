@@ -1,9 +1,0 @@
-.grid { overflow: hidden; display: -ms-grid; display: grid; grid-gap: 10px; -ms-grid-columns: (minmax(250px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-rows: minmax(200px, auto); }
-
-.grid div { border: 1px solid gray; }
-
-.grid .photo { background: blue; -ms-grid-row-span: 2; grid-row-end: span 2; }
-
-.grid .project { background: gray; -ms-grid-row-span: 3; grid-row-end: span 3; }
-
-.grid .blog { background: greenyellow; -ms-grid-row-span: 1; grid-row-end: span 1; }
