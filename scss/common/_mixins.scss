@@ -203,12 +203,6 @@
 }
 
 // media query
-@mixin desktop {
-    @media only screen and (max-width: #{$breakpoint-desktop}) {
-        @content;
-    }
-}
-
 @mixin table {
     @media only screen and (max-width: #{$breakpoint-tablet}) {
         @content;
@@ -216,7 +210,7 @@
 }
 
 @mixin mobile {
-    @media only screen and (max-width: #{$breakpoint-l-mobile}) {
+    @media only screen and (max-width: #{$breakpoint-mobile}) {
         @content;
     }
 }
