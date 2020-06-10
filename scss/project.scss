@@ -667,49 +667,6 @@
     }
 }
 
-// Introduce_character
-.introduce_character {
-    .box{
-        .box01 {
-            text-align: center;
-
-            .person {
-                float: left;
-                position: relative;
-                width: 25%;
-                padding: 10px;
-                border: 1px solid black;
-                cursor: pointer;
-                background: #fff;
-            }
-        }
-
-        .box02{
-            .person {
-                height: 295px;
-                
-                &:nth-child(3n) .exp,
-                &:nth-child(4n) .exp {
-                    left: -600px;
-                }
-            }
-        }
-    }
-
-    .explain { display: none; }
-
-    .exp {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 300px;
-        z-index: 99;
-        width: 600px;
-        height: 295px;
-        background: yellow;
-    }
-} 
-
 // click
 .click {
     @extend %position_center;
