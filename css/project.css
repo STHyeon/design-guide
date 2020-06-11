@@ -640,3 +640,25 @@ caption { visibility: hidden; overflow: hidden; width: 0; height: 0; font-size: 
 .click:hover::before { top: 0; left: 0; width: 0; }
 
 .click:hover::after { right: 0; left: 0; height: 0; }
+
+.pageTrans { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.pageTrans > div { width: 100%; height: 12.5%; background: blueviolet; -webkit-transition: -webkit-transform 500ms; transition: -webkit-transform 500ms; transition: transform 500ms; transition: transform 500ms, -webkit-transform 500ms; }
+
+.pageTrans > div:nth-child(1) { -webkit-transition-delay: 100ms; transition-delay: 100ms; }
+
+.pageTrans > div:nth-child(2) { -webkit-transition-delay: 200ms; transition-delay: 200ms; }
+
+.pageTrans > div:nth-child(3) { -webkit-transition-delay: 300ms; transition-delay: 300ms; }
+
+.pageTrans > div:nth-child(4) { -webkit-transition-delay: 400ms; transition-delay: 400ms; }
+
+.pageTrans > div:nth-child(5) { -webkit-transition-delay: 500ms; transition-delay: 500ms; }
+
+.pageTrans > div:nth-child(6) { -webkit-transition-delay: 600ms; transition-delay: 600ms; }
+
+.pageTrans > div:nth-child(7) { -webkit-transition-delay: 700ms; transition-delay: 700ms; }
+
+.pageTrans > div:nth-child(8) { -webkit-transition-delay: 800ms; transition-delay: 800ms; }
+
+body.page.reveal #loader > div { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
