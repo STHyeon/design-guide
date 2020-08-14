@@ -196,7 +196,7 @@ caption {
 // width %
 @for $i from 1 through 10 {
     .w#{$i*10} {
-        width: #{$i * 10}% !important;
+        width: #{$i * 10} + "%" !important;
     }
 }
 
