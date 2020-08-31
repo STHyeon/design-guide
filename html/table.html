@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/project.css">
+    <style>
+        .tbl {margin: 100px;}
+        table {border-top: 1px solid; border-right: 1px solid;}
+        table tbody td {height: 30px; padding: 0 20px; border-left: 1px solid; border-bottom: 1px solid;}
+
+        .slash {position: relative;}
+        /* 각도 조절해서 사용 */
+        .slash::after {position: absolute; left: 0; right: 0; content: ""; width: 100%; border-top: 1px solid #000000; transform: rotate(166deg);}
+    </style>
+</head>
+<body>
+    <div class="tbl">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="slash"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>b</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
