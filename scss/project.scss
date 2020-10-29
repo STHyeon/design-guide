@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
-@import "lib/slick.css";
+@import 'lib/slick.css';
 
-@import "common/variables";
-@import "common/mixins";
-@import "common/placeholders";
-@import "common/base";
-@import "common/common";
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/placeholders';
+@import 'common/base';
+@import 'common/common';
 
 // https://webclub.tistory.com/518 참고 사이트
 // 3중첩 넘어가지않게
 // 네이밍 _ (Underbar)로 사용하는 것을 권장
 
-@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
 
 /* -------- TAB -------- */
 /**
@@ -20,7 +20,6 @@
     type02: active, hover 했을 경우, border 선이 항목별 끝까지 직선으로 그어짐
     type03: active, hover 했을 경우, border 선이 항목별 끝까지 box형으로 그어짐
 */
-
 .tab {
     .type01 {
         border-bottom: 1px solid #dddddd;
@@ -59,7 +58,7 @@
                 top: 0;
                 bottom: 0;
                 z-index: 1;
-                content: "";
+                content: '';
                 border-right: 1px solid #ddd;
             }
 
@@ -74,7 +73,7 @@
                     left: 0;
                     right: -1px;
                     z-index: 2;
-                    content: "";
+                    content: '';
                     border-top: 2px solid red;
                 }
 
@@ -92,7 +91,7 @@
                     left: 1px;
                     right: 0;
                     bottom: -1px;
-                    content: "";
+                    content: '';
                     border-bottom: 1px solid #fff;
                 }
             }
@@ -126,7 +125,7 @@
                 top: 10px;
                 bottom: 10px;
                 z-index: 1;
-                content: "";
+                content: '';
                 border-right: 1px solid #ddd;
             }
 
@@ -152,7 +151,7 @@
                     position: absolute;
                     left: 1px;
                     right: 0;
-                    content: "";
+                    content: '';
                     border-bottom: 1px solid #fff;
                 }
             }
@@ -170,36 +169,347 @@
     }
 }
 
+/* -------- Text_Justify -------- */
+/**
+    type01: 한글자씩 떨어짐
+    type02: 한태그씩 떨어짐
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+
 .text_justify {
-    .type {
+    .type .justify {
         text-align-last: justify;
     }
 }
 
-// horizon
-.horizon {
-    overflow: auto;
-    background: #333333;
-    white-space: nowrap;
+/* -------- Custom_Checkbox -------- */
+/**
+    type01: check box - 백이미지 활용
+    type02: btn_checkbox
+    type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
+*/
+.custom_checkbox {
+    .sub_box {
+        margin: 0 0 5px;
+    }
 
-    a {
-        display: inline-block;
-        padding: 14px;
-        color: #ffffff;
-        text-align: center;
+    .type01 {
+        position: relative;
 
-        &:hover {
-            background: #777777;
+        input[type='checkbox'] {
+            & + label span {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin: -2px 10px 0;
+                vertical-align: middle;
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+                cursor: pointer;
+            }
+
+            &:checked + label span {
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+            }
+        }
+    }
+
+    .type02 {
+        position: relative;
+
+        input[type='checkbox'] {
+            & + label {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                border: 1px solid #000000;
+            }
+
+            &:checked + label {
+                background: red;
+            }
         }
     }
 }
 
-// box_hover_line
-.box_hover_line {
-    @extend %position_center;
+/* -------- Custom_Radio -------- */
+/**
+    type01: click_radio
+*/
+.custom_radio {
+    position: relative;
 
-    .btn {
-        @include btn-border-slide(#252525, #168dff, 2px, 0.8s);
+    .type01 {
+        input[type='radio'] {
+            & + label span {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                margin: -2px 10px 0 0;
+                vertical-align: middle;
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+                cursor: pointer;
+            }
+
+            &:checked + label span {
+                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+            }
+        }
+    }
+}
+
+/* -------- Custom_File -------- */
+/**
+    type01: btn_file
+    type02: label_btn
+    type03: 파일 이름 다른 곳 작성1
+    type04: 파일 이름 다른 곳 작성2
+    type05: 파일 이름 다른 곳 작성3
+    type06: 파일 추가/삭제
+    type07: type01과 같음
+*/
+.custom_file {
+    position: relative;
+
+    .type {
+        margin: 0 0 10px;
+        max-width: 300px;
+    }
+
+    .file_name_show {
+        float: left;
+        min-width: 240px;
+        height: 40px;
+        padding: 0 16px;
+        line-height: 40px;
+
+        & + label {
+            display: block;
+            float: right;
+            width: 60px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+
+    .type02 {
+        display: block;
+
+        button {
+            display: block;
+            float: right;
+            width: 60px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    }
+}
+
+/* -------- Custom_Select -------- */
+/**
+    type01: background_select
+*/
+.custom_select select {
+    background: url(../img/common/bg_select.png) no-repeat 95% center;
+    background-size: 17px 9px;
+}
+
+/* -------- Custom_Scroll -------- */
+/**
+    type01: 수평스크롤
+*/
+.custom_scroll {
+    .type01 {
+        overflow: auto;
+        white-space: nowrap;
+    
+        a {
+            display: inline-block;
+            padding: 14px;
+            text-align: center;
+    
+            &:hover {
+                background: #777777;
+            }
+        }
+    }
+}
+
+/* -------- Animation -------- */
+/**
+    type01: 모래시계
+    type02: hover_line 애니메이션
+    type03: hover_click 애니메이션
+*/
+.animation {
+    .type01 {
+        width: 100%;
+        height: 100%;
+    
+        h4 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            margin: 0;
+            font-weight: 200;
+            font-family: sans-serif;
+            color: #fff;
+        }
+        #loader {
+            animation: loader 5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+            height: 80px;
+            width: 81px;
+        }
+        @keyframes loader {
+            90% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+        #top {
+            animation: top 5s linear infinite;
+            border-top: 40px solid #1b93d8d9;
+            border-right: 40px solid transparent;
+            border-left: 40px solid transparent;
+            height: 0px;
+            width: 1px;
+            transform-origin: 50% 100%;
+        }
+        @keyframes top {
+            90% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+        #bottom {
+            animation: bottom 5s linear infinite;
+            border-right: 40px solid transparent;
+            border-bottom: 40px solid #1b93d8d9;
+            border-left: 40px solid transparent;
+            height: 0px;
+            width: 1px;
+            transform: scale(0);
+            transform-origin: 50% 100%;
+        }
+        @keyframes bottom {
+            10% {
+                transform: scale(0);
+            }
+            90% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        #line {
+            animation: line 5s linear infinite;
+            border-left: 1px dotted #1b93d8d9;
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        @keyframes line {
+            10% {
+                height: 40px;
+            }
+            100% {
+                height: 40px;
+            }
+        }
+    }
+
+    .type02 {
+        .box_hover_line {
+            // @extend %position_center;
+        
+            .btn {
+                @include btn-border-slide(#252525, #168dff, 2px, 0.8s);
+            }
+        }
+    }
+
+    .type03 {
+        padding: 0 0 60px;
+
+        .click {
+            // @extend %position_center;
+            @include border-solid(5, #4ac0ee);
+            @include transition(all, 0.25s, 0.25s ease-in);
+        
+            position: absolute;
+            left: 10px;
+            z-index: 2;
+            padding: 20px 30px;
+            font-weight: bold;
+            background: #ffffff;
+            color: #4ac0ee;
+            text-transform: uppercase;
+        
+            &::after,
+            &::before {
+                @include transition(all 0.25s ease-in);
+        
+                position: absolute;
+                top: 100%;
+                left: 0;
+                bottom: -10px;
+                content: '';
+                z-index: 1;
+                width: 100%;
+                max-width: 100%;
+            }
+        
+            &::before {
+                top: 10px;
+                left: -15px;
+                width: 15px;
+                height: 100%;
+                background: #4ac0ee;
+            }
+        
+            &::after {
+                right: 0;
+                left: -15px;
+                height: 15px;
+                background: #4ac0ee;
+            }
+        
+            &:hover {
+                margin: 0 0 -7.5px -7.5px;
+                color: #fff;
+                background: #4ac0ee;
+        
+                &::after,
+                &::before {
+                    top: 100%;
+                    left: 0;
+                    bottom: 0;
+                }
+        
+                &::before {
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                }
+        
+                &::after {
+                    right: 0;
+                    left: 0;
+                    height: 0;
+                }
+            }
+        }
     }
 }
 
@@ -243,7 +553,7 @@
     justify-content: center;
 
     h1 {
-        font-family: "Lobster Two", cursive;
+        font-family: 'Lobster Two', cursive;
         font-size: 5rem;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
         color: #343434;
@@ -345,7 +655,7 @@
     }
 
     &::after {
-        content: "";
+        content: '';
         display: block;
         left: 0;
         top: 0;
@@ -367,7 +677,7 @@
         transform: translate3d(0, 0, 0);
         color: white;
         text-transform: uppercase;
-        font-family: "Playfair Display", serif;
+        font-family: 'Playfair Display', serif;
         letter-spacing: 0.4em;
         font-size: 24px;
         text-shadow: 0 1px 0 rgba(black, 0.1);
@@ -510,7 +820,7 @@
             position: absolute;
             top: 10px;
             left: 0;
-            content: "";
+            content: '';
             width: 5px;
             height: 5px;
             @include border-radius(50%);
@@ -807,74 +1117,6 @@
     }
 }
 
-// click
-.click {
-    @extend %position_center;
-    @include border-solid(5, #4ac0ee);
-    @include transition(all, 0.25s, 0.25s ease-in);
-
-    z-index: 2;
-    padding: 20px 30px;
-    font-weight: bold;
-    background: #ffffff;
-    color: #4ac0ee;
-    text-transform: uppercase;
-
-    &::after,
-    &::before {
-        @include transition(all 0.25s ease-in);
-
-        position: absolute;
-        top: 100%;
-        left: 0;
-        bottom: -10px;
-        content: "";
-        z-index: 1;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    &::before {
-        top: 10px;
-        left: -15px;
-        width: 15px;
-        height: 100%;
-        background: #4ac0ee;
-    }
-
-    &::after {
-        right: 0;
-        left: -15px;
-        height: 15px;
-        background: #4ac0ee;
-    }
-
-    &:hover {
-        margin: 0 0 -7.5px -7.5px;
-        color: #fff;
-        background: #4ac0ee;
-
-        &::after,
-        &::before {
-            top: 100%;
-            left: 0;
-            bottom: 0;
-        }
-
-        &::before {
-            top: 0;
-            left: 0;
-            width: 0;
-        }
-
-        &::after {
-            right: 0;
-            left: 0;
-            height: 0;
-        }
-    }
-}
-
 // pagetrans
 .pageTrans {
     position: fixed;
@@ -900,96 +1142,4 @@
 
 body.page.reveal #loader > div {
     transform: translateX(-100%);
-}
-
-// loading
-.loadingContainer {
-    width: 100%;
-    height: 100%;
-    // position: fixed;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-
-    h4 {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        margin: 0;
-        font-weight: 200;
-        // opacity: .5;
-        font-family: sans-serif;
-        color: #fff;
-    }
-    #loader {
-        animation: loader 5s cubic-bezier(0.8, 0, 0.2, 1) infinite;
-        height: 80px;
-        width: 81px;
-        position: absolute;
-        top: calc(50% - 40px);
-        left: calc(50% - 40px);
-    }
-    @keyframes loader {
-        90% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(180deg);
-        }
-    }
-    #top {
-        animation: top 5s linear infinite;
-        border-top: 40px solid #1b93d8d9;
-        border-right: 40px solid transparent;
-        border-left: 40px solid transparent;
-        height: 0px;
-        width: 1px;
-        transform-origin: 50% 100%;
-    }
-    @keyframes top {
-        90% {
-            transform: scale(0);
-        }
-        100% {
-            transform: scale(0);
-        }
-    }
-    #bottom {
-        animation: bottom 5s linear infinite;
-        border-right: 40px solid transparent;
-        border-bottom: 40px solid #1b93d8d9;
-        border-left: 40px solid transparent;
-        height: 0px;
-        width: 1px;
-        transform: scale(0);
-        transform-origin: 50% 100%;
-    }
-    @keyframes bottom {
-        10% {
-            transform: scale(0);
-        }
-        90% {
-            transform: scale(1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-    #line {
-        animation: line 5s linear infinite;
-        border-left: 1px dotted #1b93d8d9;
-        height: 0px;
-        width: 0px;
-        position: absolute;
-        top: 40px;
-        left: 40px;
-    }
-    @keyframes line {
-        10% {
-            height: 40px;
-        }
-        100% {
-            height: 40px;
-        }
-    }
 }
