@@ -696,7 +696,7 @@ strong { font-weight: 400; }
     type02: 한태그씩 떨어짐
     type03: 한태그씩 떨어지고 태그안에서 한 글자씩 떨어짐
 */
-.text_justify .type .justify { text-align-last: justify; }
+.text_justify .type .justify { text-align: justify; text-align-last: justify; }
 
 /* -------- Custom_Checkbox -------- */
 /**
@@ -932,12 +932,6 @@ strong { font-weight: 400; }
 
 @keyframes drift { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
-
-.text_overflow { width: 500px; }
-
-.text_overflow table td { border-right: 1px solid #e3e3e3; }
-
-.text_overflow table td:last-child { border-right: 0; }
 
 #followMenu { position: absolute; top: 300px; right: 50px; background: red; }
 
