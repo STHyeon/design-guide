@@ -1,6 +1,6 @@
 .wrap {}
 
-.nav {position: fixed; top: 0; bottom: 0; overflow: scroll; width: 260px; padding: 10px; background:#36302b;}
+.nav {position: fixed; top: 0; bottom: 0; overflow-y: scroll; width: 260px; padding: 10px; background:#36302b;}
 .nav .box {margin: 0 0 20px;}
 .nav .box a {color: #ffffff;}
 .nav .box .title {margin: 0 0 5px; border-bottom: 2px solid #d2d2d2; font-size: 18px;}

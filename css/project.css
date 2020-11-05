@@ -903,6 +903,22 @@ strong { font-weight: 400; }
 
 .animation .type05 .start2 .title { position: absolute; left: 0; top: 0; width: 100%; z-index: 1; line-height: 300px; text-align: center; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); color: white; text-transform: uppercase; font-family: 'Playfair Display', serif; letter-spacing: 0.4em; font-size: 24px; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); text-indent: 0.3em; }
 
+/* -------- Dropdown -------- */
+/**
+    type01: normal DropDown
+*/
+.dropdown .dropbtn { width: 100%; margin: 0 0 10px; }
+
+.dropdown .dropbtn.active + .sub_box { display: block; }
+
+.dropdown .type .sub_con { float: left; margin: 0 0 20px; }
+
+.dropdown .type01 .sub_con { width: 50%; }
+
+.dropdown .type02 .sub_con { width: 33.33%; }
+
+.dropdown .sub_box { display: none; width: 100%; height: 100px; padding: 10px; background: #aeaeae; }
+
 .masonry { display: -ms-grid; display: grid; overflow: hidden; grid-gap: 10px; -ms-grid-columns: (minmax(250px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); grid-auto-rows: minmax(200px, auto); }
 
 .masonry div { border: 1px solid gray; }
