@@ -1,3 +1,4 @@
+// 브라우저 호환
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'react-app-polyfill/ie11';
