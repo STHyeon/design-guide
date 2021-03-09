@@ -7,4 +7,4 @@ export default {
     component: ListItem
 } as Meta;
 
-export const Basic: FC = () => <ListItem />;
+export const Basic: FC = () => <ListItem>a</ListItem>;

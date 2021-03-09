@@ -21,11 +21,11 @@ export const Dropdown: FC<DropDownProps> = ({ items, headers, ...props }) => (
         <Button>
             Dropdown <Icon prefix="fas" iconName="caret-down" />
         </Button>
-        <S.DropdownBox>
+        <S.DropdownBox tabIndex={1}>
             {headers && <S.DropdownHeaders>{headers}</S.DropdownHeaders>}
             {items.map(({ title, link, disabled }) => (
                 <S.DropdownItem key={title}>
-                    <S.DropdownLink to={link} disabled={disabled}>
+                    <S.DropdownLink to={link} disabled={disabled} tabIndex={-1}>
                         {title}
                     </S.DropdownLink>
                 </S.DropdownItem>

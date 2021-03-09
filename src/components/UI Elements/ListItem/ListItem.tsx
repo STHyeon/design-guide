@@ -1,4 +1,13 @@
 import React, { FC } from 'react';
 import * as S from './StyledListItem';
 
-export const ListItem: FC = ({ children, ...props }) => <S.Item {...props}>{children}</S.Item>;
+interface ListItemProps {
+    /** 접근성 */
+    tabIndex?: number;
+}
+
+export const ListItem: FC<ListItemProps> = ({ children, tabIndex, ...props }) => (
+    <S.Item tabIndex={tabIndex} {...props}>
+        {children}
+    </S.Item>
+);
