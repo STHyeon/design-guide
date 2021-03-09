@@ -18,7 +18,7 @@ export const color: IColor = {
     info: '#0dcaf0',
 
     light: '#FFFFFF',
-    bright: '#f8f9fa',
+    bright: '#dddddd',
     dark: '#212529',
 
     success: '#198754',

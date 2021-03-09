@@ -3,14 +3,22 @@ import * as S from './StyledText';
 import { typography } from 'assets/style/common';
 
 interface TextProps {
+    /** 필수값 x */
     size: string;
-    weight?: string;
+    /** 필수값 x */
+    weight: string;
+    /** 신경 x */
+    type?: boolean;
 }
 
-export const Text: FC<TextProps> = ({ size, weight }) => (
+/**
+ * 폰트 크기와 두께만 참고해주세요.(컴포넌트는 임시입니다.)
+ */
+
+export const Text: FC<TextProps> = ({ size, weight, type }) => (
     <S.TextContent size={size} weight={weight}>
         <S.TextSize>
-            {weight ? (
+            {type ? (
                 <>
                     {weight}, {typography.weight[weight]}
                 </>

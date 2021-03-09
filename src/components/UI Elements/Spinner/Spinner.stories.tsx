@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
 import { Spinner } from './Spinner';
 
@@ -7,4 +7,4 @@ export default {
     component: Spinner
 } as Meta;
 
-export const Basic = () => <Spinner />;
+export const Basic: FC = () => <Spinner />;

@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import * as S from './StyledColor';
 
 interface ColorProps {
+    /** 색상값 받는 변수 */
     appearance?: string;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
 import { Radio, RadioProps } from './Radio';
 
@@ -22,7 +22,7 @@ Basic.args = {
     children: '내용'
 };
 
-export const All = () => (
+export const All: FC = () => (
     <>
         <Radio id="basic-2" hideLabel>
             내용
@@ -39,25 +39,25 @@ export const All = () => (
     </>
 );
 
-export const HideLabel = () => (
+export const HideLabel: FC = () => (
     <Radio id="basic-8" hideLabel>
         내용
     </Radio>
 );
 
-export const ErrorMessage = () => (
+export const ErrorMessage: FC = () => (
     <Radio id="basic-9" error="비밀번호를 수정해주세요">
         내용
     </Radio>
 );
 
-export const CheckedInput = () => (
+export const CheckedInput: FC = () => (
     <Radio id="basic-6" defaultCheck>
         내용
     </Radio>
 );
 
-export const DisabledInput = () => (
+export const DisabledInput: FC = () => (
     <Radio id="basic-7" disabled>
         내용
     </Radio>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
 import { Color } from './Color';
 import * as S from './StyledColor';
@@ -8,7 +8,7 @@ export default {
     component: Color
 } as Meta;
 
-export const All = () => (
+export const All: FC = () => (
     <S.ColorWrapper>
         <Color appearance="primary">Primary</Color>
         <Color appearance="secondary">Secondary</Color>
