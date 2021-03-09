@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components/macro';
 
 interface StyledProps {
-    block?: boolean;
+    block?: number;
 }
 
 export const FontAweSomeWrapper = styled(FontAwesomeIcon)<StyledProps>`

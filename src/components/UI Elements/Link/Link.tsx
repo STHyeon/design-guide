@@ -8,8 +8,8 @@ export interface LinkProps {
     underline?: boolean;
 }
 
-export const Link: FC<LinkProps> = ({ children, to = '', ...props }) => (
-    <S.LinkWrapper to={to} {...props}>
+export const Link: FC<LinkProps> = ({ children, underline = false, to = '', ...props }) => (
+    <S.LinkWrapper to={to} underline={underline ? 1 : 0} {...props}>
         {children}
     </S.LinkWrapper>
 );

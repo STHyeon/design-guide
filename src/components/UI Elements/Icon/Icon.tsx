@@ -22,5 +22,5 @@ export const Icon: FC<IconProps> = ({ prefix, iconName, block = false, ...props 
     const FontIconLookup = { prefix: prefix, iconName: iconName };
     const coffeeIconDefinition: IconDefinition = findIconDefinition(FontIconLookup);
 
-    return <S.FontAweSomeWrapper icon={coffeeIconDefinition} block={block} {...props} />;
+    return <S.FontAweSomeWrapper icon={coffeeIconDefinition} block={block ? 1 : 0} {...props} />;
 };
