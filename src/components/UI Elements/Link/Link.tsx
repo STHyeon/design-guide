@@ -8,10 +8,12 @@ export interface LinkProps {
     underline?: boolean;
     /** 접근성 */
     tabIndex?: number;
+    /** 접근성 */
+    ariaLabel?: string;
 }
 
-export const Link: FC<LinkProps> = ({ children, tabIndex, underline = false, to = '', ...props }) => (
-    <S.LinkWrapper to={to} tabIndex={tabIndex} underline={underline ? 1 : 0} {...props}>
+export const Link: FC<LinkProps> = ({ children, tabIndex, ariaLabel, underline = false, to = '', ...props }) => (
+    <S.LinkWrapper to={to} tabIndex={tabIndex} aria-label={ariaLabel} underline={underline ? 1 : 0} {...props}>
         {children}
     </S.LinkWrapper>
 );
